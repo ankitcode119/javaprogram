@@ -1,0 +1,18 @@
+public class StringInterleave {
+    public static void main(String[] args) {
+        String input = "PQRSabcd";
+        
+        int mid = input.length() / 2;
+        String firstHalf = input.substring(0, mid);
+        String secondHalf = input.substring(mid);
+        
+        StringBuilder result = new StringBuilder();
+        
+        for (int i = 0; i < mid; i++) {
+            result.append(firstHalf.charAt(i));
+            result.append(secondHalf.charAt(i));
+        }
+        
+        System.out.println("Output: " + result.toString());
+    }
+}
